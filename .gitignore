@@ -11,3 +11,5 @@ Homestead.yaml
 /public/js/
 /public/vendor/
 /resources/assets/vendor/
+/public/mix-manifest.json
+/public/fonts/

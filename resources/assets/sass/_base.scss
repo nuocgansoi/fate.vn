@@ -1,0 +1,99 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+#contact-content {
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.contact-description {
+  height: 100vh;
+  background: url(/images/contact-background.jpg) no-repeat;
+  background-size: 100% auto;
+  .left-content {
+    padding: 30px 80px 100px 80px;
+    .description {
+      position: absolute;
+      bottom: 100px;
+      .title {
+        font-size: 33px;
+        margin-bottom: 15px;
+        color: #ffffff;
+      }
+      .line {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-content {
+  margin-top: -120px;
+  .header {
+    .title {
+      font-size: 36px;
+      font-family: 'Noto Sans', sans-serif;
+      color: #de4965;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .description {
+      color: #696969;
+    }
+    margin-bottom: 45px;
+  }
+  .subscribe-form {
+    width: 300px;
+    margin: 0 auto 80px auto;
+    .form-group {
+      margin-bottom: 25px;
+    }
+    input {
+      background-color: #f0f0f0;
+      border-radius: 30px;
+      border: none;
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+    input[type=number] {
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+    }
+    .label {
+      font-size: 14px;
+      color: #9b9b9b;
+      margin-bottom: 10px;
+    }
+    .for-18 {
+      font-weight: 500;
+      color: #f14b62;
+    }
+  }
+  .footer {
+    width: 365px;
+    margin: 0 auto;
+    .social-button {
+      padding: 8px 20px;
+      background-color: #ff7077;
+      border-radius: 100%;
+      font-size: 24px;
+      color: #fff;
+    }
+    p {
+      margin-bottom: 4px;
+    }
+  }
+}
