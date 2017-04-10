@@ -15,13 +15,13 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('other_user_id');
+            $table->unsignedInteger('other_user_id');
             $table->foreign('other_user_id')->references('id')->on('users');
             $table->text('body');
             $table->tinyInteger('type')->default(\App\Models\Message::TYPE_TEXT);
-            $table->unsignedBigInteger('delete_to_user_id')->nullable();
+            $table->unsignedInteger('delete_to_user_id')->nullable();
             $table->timestamps();
         });
     }

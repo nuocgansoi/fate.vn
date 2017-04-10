@@ -101,6 +101,10 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'email' => [
+            'unique' => 'Email đã tồn tại',
+            'email' => 'Email sai định dạng',
+        ]
     ],
 
     /*

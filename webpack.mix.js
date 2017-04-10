@@ -18,7 +18,8 @@ const publicVendor = 'public/vendor/';
 mix.js(jsFolder + 'app.js', 'public/js')
     .sass(sassFolder + 'app.scss', 'public/css')
     .sass(sassFolder + 'library.scss', 'public/css')
-    .js(jsFolder + 'bootstrap.js', 'public/js');
+    .js(jsFolder + 'bootstrap.js', 'public/js')
+    .js(jsFolder + 'home/comingSoon.js', 'public/js/home/coming_soon.js');
 
 //Admin page
 mix.copy('resources/assets/admin/css/app.css', 'public/admin/css');

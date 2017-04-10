@@ -140,9 +140,11 @@ if (!function_exists('cloud_link')) {
     }
 }
 
-function nullable($arg, $value = null)
-{
-    return !is_null($arg) && isset($arg->{$value}) ? $arg->{$value} : null;
+if (!function_exists('nullable')) {
+    function nullable($arg, $value = null)
+    {
+        return !is_null($arg) && isset($arg->{$value}) ? $arg->{$value} : null;
+    }
 }
 
 if (!function_exists('flash_message')) {
