@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class Subscribe extends Model
+class Subscriber extends Model
 {
     protected $guarded = ['id'];
+
+    protected $perPage = 15;
 }

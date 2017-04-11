@@ -1,5 +1,6 @@
 <?php
 $starActives = ['admin.star.create', 'admin.star.index', 'admin.star.edit'];
+$subscriberActives = ['admin.subscriber.create', 'admin.subscriber.index', 'admin.subscriber.edit'];
 ?>
 
 <aside class="sidebar">
@@ -19,6 +20,10 @@ $starActives = ['admin.star.create', 'admin.star.index', 'admin.star.edit'];
                         <li class="{{ Route::currentRouteName()=='admin.star.create'?'active':'' }}"><a
                                     href="{{ route('admin.star.create') }}">{{ trans('string.create') }}</a></li>
                     </ul>
+                </li>
+
+                <li class="{{ in_array(Route::currentRouteName(), $subscriberActives) ? 'active' : '' }}">
+                    <a href="{{ route('admin.subscriber.index') }}"> <i class="fa fa-th-large"></i>{{ trans('string.subscriber') }}<i class="fa arrow"></i> </a>
                 </li>
             </ul>
         </nav>

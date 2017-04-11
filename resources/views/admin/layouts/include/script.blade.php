@@ -1,2 +1,3 @@
-<script src="{{ asset('js/bootstrap.js') }}"></script>
+<script src="{{ asset('admin/js/vendor.js') }}"></script>
+<script src="{{ asset('admin/js/app.js') }}"></script>
 @stack('js')

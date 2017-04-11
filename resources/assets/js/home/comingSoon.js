@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 const RULE_REQUIRED = 'required';
+const RULE_MORE_THAN_18 = 'more_than_18';
 class ComingSoon extends React.Component {
     constructor() {
         super();
@@ -17,9 +18,10 @@ class ComingSoon extends React.Component {
         event.preventDefault();
         this.validate(RULE_REQUIRED, 'email', this.state.data.email);
         this.validate(RULE_REQUIRED, 'age', this.state.data.age);
+        this.validate(RULE_MORE_THAN_18, 'age', this.state.data.age);
         if (this.state.errors.length || this.state.isLoading) return;
         this.setState({isLoading: true});
-        axios.post('/subscribe', this.state.data).then((response) => {
+        axios.post('/subscriber', this.state.data).then((response) => {
             this.setState({
                 isLoading: false,
                 isSuccess: false,
@@ -50,10 +52,20 @@ class ComingSoon extends React.Component {
                         msg: trans('message.' + field + '_is_require'),
                     };
                     errors.push(newError);
-                }
-                else {
+                } else {
                     if (value !== '') errors.splice(errorIndex, 1);
                 }
+            case RULE_MORE_THAN_18:
+                if (value < 18) {
+                    let newError = {
+                        field: field,
+                        msg: trans('message.' + field + '_is_less_than_18'),
+                    };
+                    errors.push(newError);
+                } else {
+                    if (value > 18) errors.splice(errorIndex, 1);
+                }
+
         }
 
         this.setState({errors});
@@ -70,7 +82,7 @@ class ComingSoon extends React.Component {
         if (this.state.message) {
             return (
                 <div className="form-group">
-                    <div className={'alert alert-' + this.state.message.type}>{this.state.message.body}</div>
+                    <div className={'text-left alert alert-' + this.state.message.type}>{this.state.message.body}</div>
                 </div>
             );
         }

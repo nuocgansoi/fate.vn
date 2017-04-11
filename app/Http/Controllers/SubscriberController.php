@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SubscribeRequest;
-use App\Models\Subscribe;
+use App\Http\Requests\SubscriberRequest;
+use App\Models\Subscriber;
 use Illuminate\Http\Request;
 
-class SubscribeController extends Controller
+class SubscriberController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class SubscribeController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -25,7 +25,7 @@ class SubscribeController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,10 +34,10 @@ class SubscribeController extends Controller
      * @param SubscribeRequest|Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SubscribeRequest $request)
+    public function store(SubscriberRequest $request)
     {
         $data = $request->only(['email', 'age']);
-        Subscribe::create($data);
+        Subscriber::create($data);
 
         return response()->json(['message' => ['type' => 'success', 'body' => trans('message.subscribe_success')]]);
     }

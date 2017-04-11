@@ -13,5 +13,9 @@ return [
     'your_email' => 'Email của bạn:',
     'your_age' => 'Tuổi của bạn:',
     'register' => 'Đăng ký',
-    'coming_soon' => 'Coming soon...'
+    'coming_soon' => 'Coming soon...',
+    'email' => 'Email',
+    'age' => 'Tuổi',
+    'join_date' => 'Ngày tham gia',
+    'subscriber' => 'Người Đăng ký',
 ];

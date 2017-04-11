@@ -4,14 +4,16 @@ html {
 }
 
 #contact-content {
-  -webkit-transition: opacity 600ms, visibility 600ms;
-  transition: opacity 600ms, visibility 600ms;
+
 }
 
 .contact-description {
   min-height: 100vh;
   background: url(/images/contact-background.jpg) no-repeat;
   background-size: 100% auto;
+  @media (min-width: 1024px) and (max-width: 1280px){
+    background-size: 100% 100%;
+  }
   @media screen and(max-width: 1024px) {
     min-height: 480px;
   }
@@ -32,7 +34,7 @@ html {
     }
     .description {
       position: absolute;
-      bottom: 100px;
+      bottom: 80px;
       @media screen and (max-width: 1024px) {
         bottom: 10px;
         .title {
@@ -43,6 +45,9 @@ html {
           font-size: 16px !important;
           margin-bottom: 10px !important;
         }
+      }
+      @media (min-width: 1024px) and (max-width: 1366px){
+        bottom: 20px;
       }
       @media screen and (max-width: 320px) {
         bottom: 10px;
@@ -129,7 +134,7 @@ html {
   .footer {
     width: 365px;
     margin: 0 auto;
-    @media screen and(max-width: 320px) {
+    @media screen and(max-width: 425px) {
       width: 300px;
     }
     .social-button {
@@ -143,5 +148,11 @@ html {
     p {
       margin-bottom: 4px;
     }
+  }
+}
+
+#home {
+  .header {
+    margin-top: 25px;
   }
 }

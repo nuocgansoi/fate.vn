@@ -17,6 +17,7 @@ class CreateStarsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('content');
+            $table->string('image');
             $table->tinyInteger('type')->default(\App\Models\Star::TYPE_CHINH_TINH);
             $table->timestamps();
         });
